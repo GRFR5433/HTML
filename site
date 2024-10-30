@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #ffcccb; /* Fundo rosa */
+            padding: 20px;
+            display: flex; /* Flexbox para alinhar logo e imagem */
+            align-items: center; /* Alinha verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+        }
+        h1 {
+            margin-bottom: 0;
+            margin-right: 20px; /* Espaço entre a logo e a imagem */
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Flexbox para os corações */
+            justify-content: center; /* Centraliza os itens */
+        }
+        li {
+            margin: 0 10px; /* Espaçamento entre os corações */
+        }
+        .heart {
+            font-size: 40px; 
+            color: red;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .heart:hover {
+            transform: scale(1.3);
+        }
+        .popular {
+            margin-top: 30px;
+        }
+        .carousel {
+            border: 2px solid #ff69b4; /* Bordas rosa */
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px; /* Cantos arredondados */
+            background-color: #f9f9f9; /* Fundo claro */
+            display: flex; /* Flexbox para exibir as imagens */
+            justify-content: center; /* Centraliza as imagens */
+            flex-wrap: wrap; /* Permite quebrar linha se necessário */
+        }
+        .carousel img {
+            height: 100px; /* Altura da imagem */
+            width: auto; /* Largura automática para manter a proporção */
+            margin: 10px; /* Espaçamento entre as imagens */
+            border-radius: 5px; /* Cantos arredondados para as imagens */
+            border: 1px solid #ccc; /* Borda leve nas imagens */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Plushie Lover Company</h1>
+    <img src="cc.png" alt="Logo" style="height: 50px; width: 50px;"> 
+</header>
+
+<ul>
+    <li>
+        <a class="heart" href="sobre.html">❤️</a>
+    </li>
+    <li>
+        <a class="heart" href="contato.html">❤️</a>
+    </li>
+</ul>
+
+<section class="popular">
+    <div class="carousel">
+        <img src="cc.png" alt="Produto 1">
+        <img src="cc.png" alt="Produto 2">
+        <img src="cc.png" alt="Produto 3">
+        <img src="cc.png" alt="Produto 4">
+    </div>
+</section>
+
+</body>
+</html>
