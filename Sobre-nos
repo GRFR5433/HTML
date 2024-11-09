@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Plushie Lover Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #ffeef8 25%, #ffcccb 75%);
+            transition: background 0.5s;
+            animation: fadeIn 1s;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .heart {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+        }
+        
+        .heart img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        
+        .heart-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+            white-space: nowrap;
+        }
+        
+        h2 {
+            margin-top: 40px;
+            color: #ff69b4;
+            font-weight: 600;
+            font-family: 'Dancing Script', cursive;
+            border: 2px solid #ff69b4;
+            padding: 10px;
+            display: inline-block;
+            width: 95%;
+            font-size: 2.5em;
+        }
+        
+        .about-info {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #333;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .about-image {
+            height: 300px;
+            width: auto;
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #ff69b4;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .heart-container {
+                gap: 15px;
+            }
+            .heart {
+                width: 80px;
+                height: 80px;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .about-info {
+                font-size: 1em;
+                padding: 15px;
+            }
+            .about-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sobre Nós - Plushie Lover Company</h1>
+        <img src="logo.png" alt="Logo" style="height: 80px; width: 80px; margin-left: 10px; filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));">
+    </header>
+
+    <nav class="heart-container">
+        <a href="index.html" class="heart" aria-label="Início">
+            <img src="coração.png" alt="Início">
+            <div class="heart-label">Início</div>
+        </a>
+        <a href="sobre.html" class="heart" aria-label="Sobre Nós">
+            <img src="coração.png" alt="Sobre Nós">
+            <div class="heart-label">Sobre Nós</div>
+        </a>
+        <a href="contato.html" class="heart" aria-label="Contato">
+            <img src="coração.png" alt="Contato">
+            <div class="heart-label">Contato</div>
+        </a>
+    </nav>
+
+    <h2>Conheça Nossa Loja!</h2>
+
+    <div class="about-info">
+        <p>Bem-vindo à Plushie Lover Company, onde a fofura e a qualidade se encontram! Nossa loja virtual é dedicada a oferecer uma ampla seleção de pelúcias adoráveis que encantam tanto crianças quanto adultos.</p>
+        <p>Na Plushie Lover, acreditamos que cada pelúcia traz alegria e conforto. Desde 2024, temos sido a escolha favorita para quem procura presentes especiais ou simplesmente quer adicionar um toque de ternura ao seu dia.</p>
+        <p>Explore nossa coleção e descubra o pelúcia perfeito para você ou para alguém especial!</p>
+    </div>
+
+    <img src="Uso1.png" alt="Pelúcias" class="about-image">
+
+    <footer>
+        <p>&copy; 2024 Plushie Lover Company. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+    </script>
+
+</body>
+
+</html>
