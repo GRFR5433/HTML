@@ -1,0 +1,2 @@
+Bem-vindo à Plushie Lover Company, onde a fofura e a qualidade se encontram! Nossa loja virtual é dedicada a oferecer uma ampla seleção de pelúcias adoráveis que encantam tanto crianças quanto adultos.</p>
+        <p>Na Plushie Lover, acreditamos que cada pelúcia traz alegria e conforto. Desde 2024, temos sido a escolha favorita para quem procura presentes especiais ou simplesmente quer adicionar um toque de ternura ao seu dia.
