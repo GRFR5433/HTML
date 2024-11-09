@@ -1,0 +1,122 @@
+<title>Calculadora</title> <style> body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .calculadora {
+        background: #d3d3d3;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+        width: 450px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    input {
+        margin: 5px;
+        width: 90%;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 18px;
+        text-align: right;
+    }
+    
+    button {
+        padding: 15px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 70px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 15px 0;
+        margin-left: 20px;
+    }
+    
+    .operacoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+    .vertical-buttons {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    }
+</style>
+Calculadora
+1 2 3 4 5 6 7 8 9 0 C =
+/ * - +
+<script>
+    let operacao = '';
+    let numero1 = '';
+    let numero2 = '';
+
+    function adicionarNumero(num) {
+        if (!operacao) {
+            numero1 += num;
+            document.getElementById('resultado').value = numero1;
+        } else {
+            numero2 += num;
+            document.getElementById('resultado').value = numero2;
+        }
+    }
+
+    function calcular(op) {
+        if (numero1 && numero2) {
+            let resultado;
+            switch (op) {
+                case '+':
+                    resultado = parseFloat(numero1) + parseFloat(numero2);
+                    break;
+                case '-':
+                    resultado = parseFloat(numero1) - parseFloat(numero2);
+                    break;
+                case '*':
+                    resultado = parseFloat(numero1) * parseFloat(numero2);
+                    break;
+                case '/':
+                    resultado = numero2 !== '0' ? parseFloat(numero1) / parseFloat(numero2) : 'Erro: Divisão por zero';
+                    break;
+                default:
+                    resultado = 'Operação inválida';
+            }
+            document.getElementById('resultado').value = resultado;
+            operacao = '';
+            numero1 = resultado.toString();
+            numero2 = '';
+        } else {
+            operacao = op;
+        }
+    }
+
+    function resultado() {
+        if (numero1 && operacao && numero2) {
+            calcular(operacao);
+        }
+    }
+
+    function limpar() {
+        numero1 = '';
+        numero2 = '';
+        operacao = '';
+        document.getElementById('resultado').value = '';
+    }
+</script>
