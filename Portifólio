@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inicial.css">
+    <script src="inicial.js"></script>
+    <title>Portifólio</title>
+</head>
+
+<body>
+    <div class="titulo">
+        <center>
+            <h1>Portifólio</h1>
+        </center>
+    </div>
+
+    <div class="conteudo">
+        <img src="programador.jpeg" alt="programador" class="perfil">
+        <div class="texto">
+            <p>👋 Olá, eu sou @GRFR5433! 🚀 Sou um entusiasta da programação, sempre em busca de novos desafios. Com prática em Python para desenvolver soluções eficientes e habilidades em HTML e CSS para criar interfaces atraentes, estou pronto para mergulhar
+                em projetos incríveis! 💻 Estou aceitando convite para projetos😎👍🌟</p>
+        </div>
+    </div>
+
+    <div id="mensagemBoasVindas">
+        <h2>Seja bem-vindo, <strong id="nomeUsuario">nome</strong>!</h2>
+    </div>
+
+</body>
+
+</html>
