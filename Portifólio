@@ -31,3 +31,99 @@
 </body>
 
 </html>
+CSS:
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.titulo {
+    text-align: center;
+    color: transparent;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, #f06, #48c6ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.titulo:hover {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.perfil {
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    object-fit: cover;
+    border: 5px solid #fe0303;
+    /* Removido box-shadow que criava a sombra atrás da imagem */
+    transition: transform 0.3s ease, border 0.3s ease;
+    z-index: 1;
+}
+
+.perfil:hover {
+    transform: scale(1.1);
+    border-color: rgb(61, 233, 9);
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #111111;
+    border-radius: 12px;
+    /* Removido box-shadow que criava um fundo escuro atrás do conteúdo */
+}
+
+.texto {
+    max-width: 650px;
+    font-size: 18px;
+    color: #00FFFF;
+    line-height: 1.7;
+    padding: 15px;
+    background-color: #222222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.texto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+#mensagemBoasVindas {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, #f06, #48c6ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
