@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Site de Receitas Culinárias</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="categorias.html">Categorias</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Categorias</h2>
+        <select id="filtro-categoria" onchange="filtrarReceitas()">
+            <option value="todas">Todas</option>
+            <option value="doces">Doces</option>
+            <option value="salgados">Salgados</option>
+            <option value="veganos">Veganos</option>
+        </select>
+        <div id="receitas-categoria"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
