@@ -7,23 +7,117 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Site de Receitas Culinárias</h1>
-        <nav>
+   <header>
+        <nav class="navegacao-principal">
             <a href="index.html">Início</a>
             <a href="categorias.html">Categorias</a>
         </nav>
     </header>
     <main>
         <h2>Categorias</h2>
-        <select id="filtro-categoria" onchange="filtrarReceitas()">
-            <option value="todas">Todas</option>
-            <option value="doces">Doces</option>
-            <option value="salgados">Salgados</option>
-            <option value="veganos">Veganos</option>
-        </select>
+        <nav class="navegacao-categorias">
+            <button class="botao-categoria ativo" data-category="todas">Todas</button>
+            <button class="botao-categoria" data-category="doces">Doces</button>
+            <button class="botao-categoria" data-category="salgados">Salgados</button>
+            <button class="botao-categoria" data-category="veganos">Veganos</button>
+        </nav>
         <div id="receitas-categoria"></div>
     </main>
-    <script src="script.js"></script>
+    </script>
 </body>
 </html>
+
+
+CSS:
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.navegacao-categorias {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.botao-categoria {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-categoria:hover {
+    background-color: #ddd;
+}
+
+.botao-categoria.ativo {
+    background-color: #333;
+    color: white;
+}
+
+#receitas-categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.receita {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.receita h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.receita p {
+    color: #666;
+}
