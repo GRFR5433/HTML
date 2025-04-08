@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorias</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="culinaria.css">
+    <script src="culinaria.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 <body>
-   <header>
-        <nav class="navegacao-principal">
-            <a href="index.html">Início</a>
-            <a href="categorias.html">Categorias</a>
-        </nav>
-    </header>
-    <main>
+    <div class="barra-topo">
+        <p class="titulo">Panelinha Virtual</p>
+        <img src="logo.png" class="logo" alt="Logo Panelinha Virtual">
+        <img src="tres.png" class="tres" alt="Menu">
+    </div>
+
+    <nav class="navegacao-principal">
+        <a href="index.html">Início</a>
+        <a href="categorias.html" class="ativo">Categorias</a>
+    </nav>
+
+    <main class="pagina-categorias">
         <h2>Categorias</h2>
         <nav class="navegacao-categorias">
             <button class="botao-categoria ativo" data-category="todas">Todas</button>
@@ -21,46 +30,83 @@
             <button class="botao-categoria" data-category="salgados">Salgados</button>
             <button class="botao-categoria" data-category="veganos">Veganos</button>
         </nav>
-        <div id="receitas-categoria"></div>
+
+        <div class="receitas-categorias">
+            <div class="receita" data-category="doces">
+                <img src="brigadeiro.png" alt="Brigadeiro">
+                <p>Brigadeiro</p>
+            </div>
+        </div>
     </main>
-    </script>
+
+    <div class="barra-inferior">
+        <p class="texto">© 2025 Panelinha Virtual</p>
+    </div>
 </body>
 </html>
-
 
 CSS:
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #fff8f0;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
 }
 
-header {
-    background-color: #333;
+header, .barra-topo {
+    background-color: #a0522d;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav {
-    display: flex;
-    gap: 1rem;
+.titulo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.8rem;
+    color: white;
 }
 
-nav a {
+.logo {
+    height: 40px;
+}
+
+.tres {
+    height: 30px;
+    cursor: pointer;
+}
+
+.navegacao-principal {
+    display: flex;
+    justify-content: center;
+    background-color: #deb887;
+    gap: 2rem;
+    padding: 0.8rem 1rem;
+}
+
+.navegacao-principal a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
-nav a:hover {
-    color: #ffd700;
+.navegacao-principal a:hover {
+    color: #ffcc70;
+}
+
+.navegacao-principal .ativo {
+    text-decoration: underline;
+    color: #fff;
+    background-color: #5c3d2e;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
 }
 
 main {
@@ -70,13 +116,16 @@ main {
 }
 
 h2 {
-    color: #333;
+    color: #5c3d2e;
     margin-bottom: 1.5rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .navegacao-categorias {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -85,22 +134,28 @@ h2 {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border: none;
-    border-radius: 4px;
-    background-color: #eee;
+    border-radius: 20px;
+    background-color: #ffe5b4;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: bold;
+    color: #5c3d2e;
 }
 
 .botao-categoria:hover {
-    background-color: #ddd;
+    background-color: #ffd59a;
 }
 
 .botao-categoria.ativo {
-    background-color: #333;
+    background-color: #a0522d;
     color: white;
 }
 
-#receitas-categoria {
+.botao-categoria.ativo:hover {
+    background-color: #8b4513;
+}
+
+.receitas-categorias, #receitas-categoria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
@@ -109,15 +164,87 @@ h2 {
 .receita {
     background-color: white;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    opacity: 1;
 }
 
-.receita h3 {
+.receita:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.receita img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
     margin-bottom: 0.5rem;
-    color: #333;
 }
 
 .receita p {
-    color: #666;
+    color: #5c3d2e;
+    font-size: 1.1rem;
 }
+
+.receita.escondida {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.98);
+}
+
+.barra-inferior {
+    background-color: #a0522d;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.barra-inferior .texto {
+    color: white;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 1.4rem;
+    }
+
+    .botao-categoria {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .receita p {
+        font-size: 1rem;
+    }
+
+    .navegacao-principal {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+JAVASRIPT:
+document.addEventListener("DOMContentLoaded", () => {
+    const botoes = document.querySelectorAll(".botao-categoria");
+    const receitas = document.querySelectorAll(".receita");
+
+    botoes.forEach(botao => {
+        botao.addEventListener("click", () => {
+            botoes.forEach(b => b.classList.remove("ativo"));
+            botao.classList.add("ativo");
+
+            const categoriaSelecionada = botao.getAttribute("data-category");
+
+            receitas.forEach(receita => {
+                const categoriaReceita = receita.getAttribute("data-category");
+
+                receita.style.display =
+                    categoriaSelecionada === "todas" || categoriaReceita === categoriaSelecionada
+                        ? "block"
+                        : "none";
+            });
+        });
+    });
+});
