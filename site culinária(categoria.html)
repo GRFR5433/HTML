@@ -1,242 +1,357 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias</title>
-    <link rel="stylesheet" href="culinaria.css">
-    <script src="culinaria.js"></script>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="inner.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="barra-topo">
-        <p class="titulo">Panelinha Virtual</p>
-        <img src="logo.png" class="logo" alt="Logo Panelinha Virtual">
-        <img src="tres.png" class="tres" alt="Menu">
+    
+ <div class="barra-topo">
+    <p class="titulo">Panelinha Virtual </p>
+    <!-- <img src="logo.png" class="logo"> -->
+ </div>
+
+ <button class="button" id="botao">≡</button>
+ <div class="menu" id="menuB">
+      <div class="edit">
+         <a href="" class="palavra">Categorias</a>
+         <a href="" class="palavra">Favoritas</a>
+         <a href="" class="palavra">Adicionar Receitas</a>
+      </div>
+ </div>
+
+ <div class="barra-clara">
+    <img src="file.png" class="imagem">
+    <p class="r">Receita da</p>
+    <p class="s">Semana!</p>
+ </div>
+
+ <div class="pedaco">
+    <p class="receita">Acesse-a</p>
+ </div>
+
+   <div class="Populares">Populares</div>
+
+ <div class="carrossel">
+    <div class="carrossel-track">
+       <div class="slide"><img src="lasanha.png" alt="Imagem 1" /></div>
+       <div class="slide"><img src="aumondega.png" alt="Imagem 2" /></div>
+       <div class="slide"><img src="camarao.png" alt="Imagem 3" /></div>
     </div>
+ </div>
 
-    <nav class="navegacao-principal">
-        <a href="index.html">Início</a>
-        <a href="categorias.html" class="ativo">Categorias</a>
-    </nav>
+ <div class="barra-inferior">
+   <p class="texto">© 2025 Panelinha Virtual</p>
+ </div>
 
-    <main class="pagina-categorias">
-        <h2>Categorias</h2>
-        <nav class="navegacao-categorias">
-            <button class="botao-categoria ativo" data-category="todas">Todas</button>
-            <button class="botao-categoria" data-category="doces">Doces</button>
-            <button class="botao-categoria" data-category="salgados">Salgados</button>
-            <button class="botao-categoria" data-category="veganos">Veganos</button>
-        </nav>
-
-        <div class="receitas-categorias">
-            <div class="receita" data-category="doces">
-                <img src="brigadeiro.png" alt="Brigadeiro">
-                <p>Brigadeiro</p>
-            </div>
-        </div>
-    </main>
-
-    <div class="barra-inferior">
-        <p class="texto">© 2025 Panelinha Virtual</p>
-    </div>
+<script src="inner.js" defer></script>
 </body>
 </html>
-
 CSS:
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+.Populares{
+    color: #5a3b21;
+    font-size: 450%;
+    font-family: "Archivo Black", "sans-serif";
+    text-align: center;
+    padding-top: 100px;
 }
 
-body {
-    background-color: #fff8f0;
-    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+.logo{
+    width: 170px;
+    margin-top: -120px;
 }
-
+.tres{
+    position: absolute;
+    right: 50px;
+    top: 35px;
+    width: 60px;
+}
 .barra-topo {
-    background-color: #a0522d;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.titulo {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.8rem;
-    color: white;
-}
-
-.logo {
-    height: 40px;
-}
-
-.tres {
-    height: 30px;
-    cursor: pointer;
-}
-
-.navegacao-principal {
-    display: flex;
-    justify-content: center;
-    background-color: #deb887;
-    gap: 2rem;
-    padding: 0.8rem 1rem;
-}
-
-.navegacao-principal a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-.navegacao-principal a:hover {
-    color: #ffcc70;
-}
-
-.navegacao-principal .ativo {
-    text-decoration: underline;
-    color: #fff;
-    background-color: #5c3d2e;
-    padding: 0.3rem 0.8rem;
-    border-radius: 8px;
-}
-
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-h2 {
-    color: #5c3d2e;
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.navegacao-categorias {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.botao-categoria {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 20px;
-    background-color: #ffe5b4;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    color: #5c3d2e;
-}
-
-.botao-categoria:hover {
-    background-color: #ffd59a;
-}
-
-.botao-categoria.ativo {
-    background-color: #a0522d;
-    color: white;
-}
-
-.receitas-categorias {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.receita {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.receita:hover {
-    transform: translateY(-5px);
-}
-
-.receita img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
+    height: 150px;
+    background-color: #5a3b21;
+    position: static;
+    top: 0;
+    left: 0;
+  
+}
+body {
+    margin: 0;
+    font-family: Arial,sans-serif;
 }
 
-.receita p {
-    color: #5c3d2e;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.barra-inferior {
-    background-color: #a0522d;
+.titulo{
+    color: #e6b566;
+    font-size: 400%;
     text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
+    font-family: "Archivo Black", sans-serif;
+    padding-top: 25px;
 }
-
-.barra-inferior .texto {
+.barra-clara{
+    width: 100%;
+    position:static;
+    background-color: #e6b566;
+    top: 0px;
+    left: 0;
+    height: 400px;
+}
+.imagem{
+    width: 532px;
+    height: auto;
+    float: right;
+}
+.r{
+    font-family: "Archivo Black", "sans-serif";
+    font-size: 400%;
+    color: #b77a40;
+    text-align: center;
+    padding-top: 100px;
+}
+.s{
+    color: #5a3b21;
+    font-size: 110px;
+    font-family: "Archivo Black", "sans-serif";
+    text-align: center;
+    margin-top: -55px;
+    
+}
+.f{
+    color: #f2e6d9;
+    font-family: "Archivo Black", "sans-serif";
+    font-size: 200%;
+}
+.pedaco{
+    height: 30px;
+    width: 200px;
+    background-color: #b77a40;
+    border-radius: 10px;
+    margin-top: -65px;
+    margin-left: 20px;
+}
+.receita{
+    font-size: 125%;
+    font-family: "Archivo Black", "sans-serif";
     color: white;
-    font-size: 1rem;
+    text-align: center;
+}
+.lasanha{
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.carrossel{
+    width: 700px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
+    margin: 100px auto;
+    
+}
+.carrossel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slide img {
+    width: 100%;
+    display: block;
+}
+.barra-inferior {
+    width: 100%;
+    height: 100px;
+    background-color: #5a3b21; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    bottom: 0;
+}
+  
+.texto {
+    color: white;
+    font-size: 120%;
+}
+.galeria{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    flex-wrap: wrap;
+
+}
+  
+.carrossel:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+.pedaco:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.tres:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+
+}
+.button{
+    cursor: pointer;
+    font-size: 90px;
+    border: none;
+    background: none;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    right: 15px;
+    top: 10px;
+    
+}
+.menu{
+    display: none;
+    background-color: #b77a40;
+    color: #5a3b21;
+    width: 300px;
+    text-align: center; 
+    border-radius: 4px;
+    position: absolute;
+    top: 120px;
+    height: 500px;
+    right: 0;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.3) ;
+    z-index: 1000;
+}
+.menu.show{
+    display: block;
+}
+.button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.edit{
+    text-align: center;
+    font-size: 23px;
+    color: #e6b566;
+    font-family: "Archivo Black", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+}
+.palavra{
+    margin-bottom: 90px;
+    text-decoration: none;
+    color: inherit;
+}
+.palavra:hover{
+    color: #5a3b21;
+}
+@media (max-width: 768px){
+
+.titulo{
+    color: #e6b566;
+    font-size: 200%;
+    text-align: center;
+    font-family: "Archivo Black", sans-serif;
+    padding-top: 50px;
+}
+.button{
+    cursor: pointer;
+    font-size: 50px;
+    border: none;
+    background: none;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    right: 15px;
+    top: 32px;
+}
+.menu{
+    display: none;
+    background-color: #b77a40;
+    color: #5a3b21;
+    width: 200px;
+    text-align: center; 
+    border-radius: 4px;
+    position: absolute;
+    top: 80px;
+    height: 400px;
+    right: 0;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.3) ;
+    z-index: 1000;
+}
+.edit{
+    text-align: center;
+    font-size: 18px;
+    color: #e6b566;
+    font-family: "Archivo Black", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+}
+.barra-clara{
+   display: none;
+}
+.pedaco{
+    display: none;
 }
 
-@media (max-width: 600px) {
-    .titulo {
-        font-size: 1.4rem;
-    }
-    
-    .navegacao-principal {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .botao-categoria {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
+.carrossel{
+    width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
+    margin: 100px auto;
 }
-JS:
-document.addEventListener("DOMContentLoaded", () => {
-    const botoes = document.querySelectorAll(".botao-categoria");
-    const receitas = document.querySelectorAll(".receita");
+.Populares{
+    color: #5a3b21;
+    font-size: 300%;
+    font-family: "Archivo Black", "sans-serif";
+    text-align: center;
+    padding-top: 100px;
+}
 
-    botoes.forEach(botao => {
-        botao.addEventListener("click", () => {
-            // Remove active class from all buttons
-            botoes.forEach(b => b.classList.remove("ativo"));
-            // Add active class to clicked button
-            botao.classList.add("ativo");
+}
+javasript:
 
-            const categoriaSelecionada = botao.getAttribute("data-category");
+const track = document.querySelector('.carrosel-track');
+const slide = Array.from(document.querySelectorAll('.slides'));
+let a = 0;
 
-            receitas.forEach(receita => {
-                const categoriaReceita = receita.getAttribute("data-category");
-                
-                if (categoriaSelecionada === "todas" || categoriaReceita === categoriaSelecionada) {
-                    receita.style.display = "block";
-                    receita.style.opacity = "1";
-                } else {
-                    receita.style.display = "none";
-                    receita.style.opacity = "0";
-                }
-            });
-        });
-    });
-});
+function mover(){
+    a = (a + 1) % slides.length;
+    track.slide.transform = translateX('-${a * 100}%');
+}
+
+setInterval(mover, 3000);
+
+const botao = document.getElementById('botao')
+const menuB = document.getElementById('menuB')
+
+botao.addEventListener('click', function(){
+
+menuB.classList.toggle('show')
+
+})
